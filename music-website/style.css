@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1B1A1A;
+    color: #fff;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr 2fr;
+    width: 100vw;
+
+    
+}
+.sidebar {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    height: 100vh;
+}
+.content {
+    background: url(./src/content-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+   
+}
+.top-album {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.sidebar .content .top-album .latest-album .latest-single .footer {
+    text-align: center;
+}
+/* sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.sidebar li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar li:hover {
+    background: #545050;
+    border-radius: 50px;
+    padding: 15px;
+    transition: ease-in-out .3s;
+}
+.sidebar h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.sidebar img {
+    width: 38px;
+}
+.sidebar span {
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.sidebar-top, .sidebar-bottom {
+    margin-left: 20px;
+}
+/* content*/
+.content {
+    position: relative;
+    max-width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+.content .search-box {
+    background: rgba(68, 63, 63, 0.4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.content .search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.content .search-box input:focus {
+   color: #fff;
+}
+.search-box img {
+      width: 24px;
+}
+::placeholder {
+    color: #fff;
+    font-style: italic;
+    font-size: 10px;
+}
+.content .text-area {
+    text-align: end;
+}
+.content button {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    background: rgba(68, 63, 63, 0.4);
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 10px;
+    cursor: pointer;
+}
+.content button:hover {
+    background: #fff;
+    color: #1B1A1A;
+    transform: translate(2px, 2px);
+    transition: ease-in-out .3s;
+}
+.content .text-area h1 {
+    font-size: 64px;
+    text-shadow: 2px 2px black;
+}
+.content p {
+    font-size: 10px;
+    text-shadow: 2px 2px black;
+}
+/* Top Album */
+.top-album h4 {
+    margin: 20px;
+}
+.carousel img:nth-child(3){
+   width: 151px;
+   height: 151px;
+}
+.carousel {
+    display: flex;
+    align-items: center;
+}
+.carousel img {
+    margin-left: 30px;
+}
+/* Latest Album and Latest Singles*/ 
+.latest-album h4,
+.latest-singles h4 {
+    margin: 25px;       
+}
+.latest-album ul li,
+.latest-singles ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.latest-album ul li span, img, h5 {
+    margin-left: 20px;
+}
+.latest-album ul li>div,
+.latest-singles ul li>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Footer */
+.footer {
+    display: flex;
+    width: 100vw;
+} 
+.profile {
+    display: flex;
+    align-items: center;
+}
+.footer img {
+    border-radius: 50%;
+    margin: 20px;
+}
+.player {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin-left: 90px;
+}
+.player img:first-child, img:nth-child(3) {
+    width: 25px;
+    height: 25px;
+}
+.player i {
+    font-size: 35px;
+}
+.player img:nth-child(2) {
+    width: 20px;
+    height: 20px;
+}
+.player img:last-child {
+    width: 500px;
+}
+
+
