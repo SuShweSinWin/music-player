@@ -23,10 +23,10 @@ body {
 /* Grid */
 .grid-container {
     display: grid;
-    grid-template-columns: 0.8fr 2fr 2fr;
+    grid-template-columns: 300px auto;
     width: 100vw;
 
-    
+
 }
 .sidebar {
     grid-row-start: 1;
@@ -38,9 +38,8 @@ body {
     background-size: cover;
     background-position: center center;
     padding: 50px;
-    grid-column-start: 2;
-    grid-column-end: 4;
-   
+
+
 }
 .top-album {
     grid-column-start: 2;
@@ -166,10 +165,10 @@ body {
 .carousel img {
     margin-left: 30px;
 }
-/* Latest Album and Latest Singles*/ 
+/* Latest Album and Latest Singles*/
 .latest-album h4,
 .latest-singles h4 {
-    margin: 25px;       
+    margin: 25px;
 }
 .latest-album ul li,
 .latest-singles ul li {
@@ -193,7 +192,7 @@ body {
 .footer {
     display: flex;
     width: 100vw;
-} 
+}
 .profile {
     display: flex;
     align-items: center;
@@ -223,4 +222,34 @@ body {
     width: 500px;
 }
 
+
+.latest {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+/* Media Queries */
+
+/* sm */
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+
+    .grid-container{
+        grid-template-columns: auto;
+    }
+}
+
+
+
+/* md */
+@media only screen and (max-width: 800px) {
+    .latest {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+}
 
